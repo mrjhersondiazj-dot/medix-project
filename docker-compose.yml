@@ -1,0 +1,58 @@
+services:
+  backend:
+    build: ./backend
+    container_name: medix_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      DATABASE_URL: postgresql+asyncpg://medix_user:medix_password@postgres:5432/medix_db
+      REDIS_URL: redis://redis:6379/0
+      SECRET_KEY: ${SECRET_KEY:-MEDIX_LOCAL_DOCKER_SECRET_CHANGE_ME}
+      ENVIRONMENT: development
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: medix_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    environment:
+      VITE_API_URL: ${VITE_API_URL:-http://localhost:8000/api/v1}
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: medix_postgres
+    environment:
+      POSTGRES_DB: medix_db
+      POSTGRES_USER: medix_user
+      POSTGRES_PASSWORD: medix_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - medix_postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: medix_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - medix_redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  medix_postgres_data:
+  medix_redis_data:
