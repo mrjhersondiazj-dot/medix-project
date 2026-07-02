@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: medix-backend
+    runtime: docker
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile.prod
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: medix-postgres
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: medix-redis
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: https://medix-frontend.onrender.com
+      - key: ENVIRONMENT
+        value: production
+
+  - type: web
+    name: medix-frontend
+    runtime: docker
+    dockerContext: ./frontend
+    dockerfilePath: ./frontend/Dockerfile.prod
+    envVars:
+      - key: VITE_API_URL
+        value: https://medix-backend.onrender.com/api/v1
+
+  - type: redis
+    name: medix-redis
+    plan: free
+    ipAllowList: []
+
+databases:
+  - name: medix-postgres
+    plan: free
