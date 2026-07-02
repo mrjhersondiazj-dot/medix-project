@@ -1,4 +1,9 @@
 import axios from "axios";
+import demoApi from "./demoApi";
+
+if (import.meta.env.VITE_DEMO_MODE === "true") {
+  console.info("MEDIX demo mode enabled: using local browser data.");
+}
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000/api/v1",
@@ -40,4 +45,4 @@ api.interceptors.response.use(
   }
 );
 
-export default api;
+export default import.meta.env.VITE_DEMO_MODE === "true" ? demoApi : api;

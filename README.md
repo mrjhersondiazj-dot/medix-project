@@ -37,3 +37,8 @@ Recepcion: DNI 22223333 / recep123
 ## Despliegue publico
 
 Revisa [DEPLOYMENT.md](DEPLOYMENT.md) para publicar backend, frontend, PostgreSQL y Redis en un proveedor cloud.
+
+## Demo gratis en GitHub Pages
+
+La version publicada en GitHub Pages usa `VITE_DEMO_MODE=true` y guarda datos de prueba en el navegador con `localStorage`.
+No usa datos reales de pacientes ni expone una base de datos publica.
