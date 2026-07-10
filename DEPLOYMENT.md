@@ -4,7 +4,7 @@
 
 ```powershell
 docker compose up -d --build
-docker compose exec backend python -m app.scripts.init_db
+docker compose exec backend python -m app.scripts.requisito_no_funcional_inicializacion_datos_demo_despliegue
 ```
 
 Open `http://127.0.0.1:5173`.
@@ -31,4 +31,4 @@ Recommended deployment:
 5. Set `CORS_ORIGINS` to the final frontend URL.
 6. Set `VITE_API_URL` to the final backend URL plus `/api/v1`.
 
-The production backend container runs `python -m app.scripts.init_db` before starting, so demo roles are created automatically.
+The production backend container runs `python -m app.scripts.requisito_no_funcional_inicializacion_datos_demo_despliegue` before starting, so demo roles are created automatically.

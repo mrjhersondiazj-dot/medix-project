@@ -6,7 +6,7 @@ Sistema hospitalario para gestion de pacientes, citas, admision, atenciones medi
 
 ```powershell
 docker compose up -d --build
-docker compose exec backend python -m app.scripts.init_db
+docker compose exec backend python -m app.scripts.requisito_no_funcional_inicializacion_datos_demo_despliegue
 ```
 
 Abrir:

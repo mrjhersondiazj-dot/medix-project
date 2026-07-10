@@ -1,0 +1,3879 @@
+/* EXPOSICION MEDIX
+   Archivo: RequisitoNoFuncional_InterfazDisenoResponsivo_Usabilidad.css
+   Proposito: Estilos globales: define diseno, responsividad, tarjetas, tablas, botones y estados visuales.
+   Nota: los comentarios explican estilos para sustentacion; no cambian reglas visuales. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Explicacion: este bloque define estilos visuales o responsivos para :root { */
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f8fa;
+  color: #111827;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para body { */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .app-shell { */
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 272px minmax(0, 1fr);
+  background: #f7f9fb;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .sidebar { */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #e4e8ee;
+  background: #ffffff;
+  padding: 24px 16px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand { */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 8px 24px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand h1 { */
+.brand h1 {
+  margin: 0;
+  color: #007e7b;
+  font-size: 31px;
+  line-height: 1;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand p { */
+.brand p {
+  margin: 2px 0 0;
+  color: #697383;
+  font-size: 14px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand-mark { */
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #009b98, #006d75);
+  box-shadow: 0 10px 24px rgba(0, 126, 123, 0.25);
+  color: #ffffff;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand-mark span, */
+.brand-mark span,
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand-mark::before { */
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  opacity: 0.95;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand-mark span { */
+.brand-mark span {
+  width: 26px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand-mark::before { */
+.brand-mark::before {
+  width: 10px;
+  height: 26px;
+  border-radius: 2px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .brand-mark strong { */
+.brand-mark strong {
+  opacity: 0;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .sidebar-nav section { */
+.sidebar-nav section {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .sidebar-nav section:last-child { */
+.sidebar-nav section:last-child {
+  border-bottom: 0;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .nav-title { */
+.nav-title {
+  margin: 0 8px 9px;
+  color: #858c98;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .nav-item { */
+.nav-item {
+  width: 100%;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #303846;
+  padding: 10px 12px;
+  font-size: 15px;
+  font-weight: 650;
+  text-align: left;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .nav-item:hover { */
+.nav-item:hover {
+  background: #f1f6f7;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .nav-item.active { */
+.nav-item.active {
+  background: linear-gradient(135deg, #008f8c, #00757b);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 126, 123, 0.24);
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .workspace { */
+.workspace {
+  min-width: 0;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .topbar { */
+.topbar {
+  min-height: 86px;
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) minmax(230px, 1fr) 150px 140px minmax(210px, 0.9fr);
+  align-items: center;
+  border-bottom: 1px solid #e4e8ee;
+  background: #ffffff;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .context-card, */
+.context-card,
+/* Explicacion: este bloque define estilos visuales o responsivos para .user-pill { */
+.user-pill {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 22px;
+  border-right: 1px solid #e4e8ee;
+  color: #1f2937;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .context-card svg, */
+.context-card svg,
+/* Explicacion: este bloque define estilos visuales o responsivos para .user-pill svg { */
+.user-pill svg {
+  color: #202633;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .context-card strong, */
+.context-card strong,
+/* Explicacion: este bloque define estilos visuales o responsivos para .user-pill strong { */
+.user-pill strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .context-card span, */
+.context-card span,
+/* Explicacion: este bloque define estilos visuales o responsivos para .user-pill span { */
+.user-pill span {
+  display: block;
+  margin-top: 4px;
+  color: #7b8492;
+  font-size: 13px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .live-pill { */
+.live-pill {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: #dff7ef;
+  color: #007e7b;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .user-pill { */
+.user-pill {
+  border-right: 0;
+  justify-content: space-between;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .user-pill button { */
+.user-pill button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e2e6ec;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .tabs { */
+.tabs {
+  display: flex;
+  gap: 8px;
+  padding: 14px 22px 0;
+  border-bottom: 1px solid #e4e8ee;
+  background: #ffffff;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .tabs button { */
+.tabs button {
+  min-width: 110px;
+  height: 38px;
+  border: 1px solid #dfe5eb;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background: #f8fafc;
+  color: #626b79;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .tabs .selected { */
+.tabs .selected {
+  background: #ffffff;
+  color: #007e7b;
+  box-shadow: inset 0 -2px 0 #008f8c;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .dashboard-grid { */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: start;
+  gap: 18px;
+  padding: 22px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .left-stack, */
+.left-stack,
+/* Explicacion: este bloque define estilos visuales o responsivos para .right-stack { */
+.right-stack {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-width: 0;
+  width: 100%;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .left-stack { */
+.left-stack {
+  overflow: hidden;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .main-panel, */
+.main-panel,
+/* Explicacion: este bloque define estilos visuales o responsivos para .side-panel, */
+.side-panel,
+/* Explicacion: este bloque define estilos visuales o responsivos para .medix-card { */
+.medix-card {
+  border: 1px solid #dfe5eb;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.035);
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .main-panel { */
+.main-panel {
+  padding: 16px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .panel-heading, */
+.panel-heading,
+/* Explicacion: este bloque define estilos visuales o responsivos para .side-heading { */
+.side-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .panel-heading h2, */
+.panel-heading h2,
+/* Explicacion: este bloque define estilos visuales o responsivos para .side-heading h3 { */
+.side-heading h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .panel-heading p { */
+.panel-heading p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .panel-heading > span, */
+.panel-heading > span,
+/* Explicacion: este bloque define estilos visuales o responsivos para .side-heading span { */
+.side-heading span {
+  color: #778190;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-grid { */
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-card { */
+.flow-card {
+  min-width: 0;
+  min-height: 332px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #dfe5eb;
+  border-radius: 8px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-head { */
+.flow-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 16px 12px 8px;
+  color: #007e7b;
+  min-width: 0;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-head strong { */
+.flow-head strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-head span { */
+.flow-head span {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #009c98, #414fc3);
+  color: white;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-card svg { */
+.flow-card svg {
+  margin-top: 10px;
+  color: #222936;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-card b { */
+.flow-card b {
+  margin-top: 18px;
+  color: #008f8c;
+  font-size: 29px;
+  line-height: 1;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-card p { */
+.flow-card p {
+  margin: 8px 0 14px;
+  color: #27313f;
+  font-size: 13px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-detail { */
+.flow-detail {
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid #e5e9ef;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-detail div { */
+.flow-detail div {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 6px;
+  border-bottom: 1px solid #e5e9ef;
+  padding: 10px 12px;
+  font-size: 11px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-detail strong { */
+.flow-detail strong {
+  color: #293fb6;
+  font-size: 14px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-detail span { */
+.flow-detail span {
+  color: #606a78;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-card button { */
+.flow-card button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  background: #ffffff;
+  color: #007e7b;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .kpi-strip { */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  border: 1px solid #dfe5eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .metric { */
+.metric {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .metric svg { */
+.metric svg {
+  grid-row: span 2;
+  color: #007e7b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .metric span { */
+.metric span {
+  color: #667080;
+  font-size: 13px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .metric strong { */
+.metric strong {
+  color: #111827;
+  font-size: 17px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .metric.compact { */
+.metric.compact {
+  grid-template-columns: 26px minmax(0, 1fr) auto;
+  border: 1px solid #e2e7ed;
+  border-radius: 7px;
+  padding: 9px;
+  margin-top: 8px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .metric.compact svg { */
+.metric.compact svg {
+  grid-row: auto;
+  color: #316bc8;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .side-panel { */
+.side-panel {
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .donut { */
+.donut {
+  width: 146px;
+  height: 146px;
+  margin: 8px auto 14px;
+  border-radius: 50%;
+  background: conic-gradient(#0f8f8c 0 28%, #3467c8 28% 50%, #5559c9 50% 69%, #57c8b7 69% 82%, #c7c9cc 82% 100%);
+  position: relative;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .donut::after { */
+.donut::after {
+  content: "";
+  position: absolute;
+  inset: 39px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px #e6e9ee;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .service-list div, */
+.service-list div,
+/* Explicacion: este bloque define estilos visuales o responsivos para .summary-list div { */
+.summary-list div {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  margin-top: 9px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .service-list span { */
+.service-list span {
+  width: 10px;
+  height: 10px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .service-list p, */
+.service-list p,
+/* Explicacion: este bloque define estilos visuales o responsivos para .summary-list dt { */
+.summary-list dt {
+  margin: 0;
+  color: #303846;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .service-list strong, */
+.service-list strong,
+/* Explicacion: este bloque define estilos visuales o responsivos para .summary-list dd { */
+.summary-list dd {
+  margin: 0;
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .bar-row { */
+.bar-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr) 38px;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .bar-row > div { */
+.bar-row > div {
+  height: 11px;
+  border-radius: 3px;
+  background: #edf0f4;
+  overflow: hidden;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .bar-row i { */
+.bar-row i {
+  display: block;
+  height: 100%;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .green { background: #20b56b; } */
+.green { background: #20b56b; }
+/* Explicacion: este bloque define estilos visuales o responsivos para .blue { background: #4c5fd7; } */
+.blue { background: #4c5fd7; }
+/* Explicacion: este bloque define estilos visuales o responsivos para .amber { background: #c58110; } */
+.amber { background: #c58110; }
+/* Explicacion: este bloque define estilos visuales o responsivos para .cyan { background: #4a84d8; } */
+.cyan { background: #4a84d8; }
+/* Explicacion: este bloque define estilos visuales o responsivos para .gray { background: #c9ced6; } */
+.gray { background: #c9ced6; }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .table-panel { */
+.table-panel {
+  grid-column: 1;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .table-actions { */
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .table-actions input { */
+.table-actions input {
+  width: 190px;
+  height: 40px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  padding: 0 12px;
+  outline: none;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .segmented { */
+.segmented {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .segmented button { */
+.segmented button {
+  min-width: 88px;
+  height: 38px;
+  border: 1px solid #dfe5eb;
+  border-radius: 7px 7px 0 0;
+  background: #f8fafc;
+  color: #596373;
+  font-size: 12px;
+  font-weight: 750;
+  text-transform: capitalize;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .segmented .active { */
+.segmented .active {
+  border-color: #008f8c;
+  background: #ffffff;
+  color: #007e7b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .data-table-wrap { */
+.data-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .data-table { */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .data-table th { */
+.data-table th {
+  background: #fafbfc;
+  color: #2f3845;
+  font-weight: 800;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .data-table th, */
+.data-table th,
+/* Explicacion: este bloque define estilos visuales o responsivos para .data-table td { */
+.data-table td {
+  border: 1px solid #e2e7ed;
+  padding: 9px 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .data-table tbody tr:hover { */
+.data-table tbody tr:hover {
+  background: #f7fbfb;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .table-foot { */
+.table-foot {
+  margin: 12px 0 0;
+  color: #717b89;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status { */
+.status {
+  display: inline-flex;
+  min-width: 74px;
+  justify-content: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  padding: 3px 8px;
+  color: #334155;
+  background: #f8fafc;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-atendida, */
+.status-atendida,
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-validacion { */
+.status-validacion {
+  border-color: #9adfbd;
+  background: #e9fff3;
+  color: #00834b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-en-atencion, */
+.status-en-atencion,
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-en_atencion, */
+.status-en_atencion,
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-atencion { */
+.status-atencion {
+  border-color: #b5c3ff;
+  background: #eef2ff;
+  color: #3144c6;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-en-cola, */
+.status-en-cola,
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-cola { */
+.status-cola {
+  border-color: #f3cf8a;
+  background: #fff7e7;
+  color: #a05e00;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-llegado, */
+.status-llegado,
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-llegada { */
+.status-llegada {
+  border-color: #b8d7ff;
+  background: #eef6ff;
+  color: #1e66c1;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-programada { */
+.status-programada {
+  border-color: #a6e3e1;
+  background: #ecffff;
+  color: #007e7b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-cancelada { */
+.status-cancelada {
+  border-color: #fecaca;
+  background: #fff1f2;
+  color: #be123c;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-no_presentado { */
+.status-no_presentado {
+  border-color: #fed7aa;
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-cita { */
+.status-cita {
+  border-color: #a6e3e1;
+  background: #ecffff;
+  color: #007e7b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .gauge { */
+.gauge {
+  width: 170px;
+  height: 90px;
+  margin: 8px auto;
+  display: grid;
+  place-items: end center;
+  border-radius: 170px 170px 0 0;
+  background: conic-gradient(from 270deg at 50% 100%, #0f8f8c 0 153deg, #e7eaef 153deg 180deg);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 14px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .gauge::after { */
+.gauge::after {
+  content: "";
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 0;
+  height: 56px;
+  border-radius: 80px 80px 0 0;
+  background: #ffffff;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .gauge span, */
+.gauge span,
+/* Explicacion: este bloque define estilos visuales o responsivos para .gauge small { */
+.gauge small {
+  position: relative;
+  z-index: 1;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .gauge span { */
+.gauge span {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .gauge small { */
+.gauge small {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .audit-list { */
+.audit-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .audit-list li { */
+.audit-list li {
+  border-bottom: 1px solid #edf0f4;
+  padding: 11px 0;
+  color: #374151;
+  font-size: 13px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .empty-state { */
+.empty-state {
+  margin: 22px;
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  align-content: center;
+  gap: 10px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .empty-state svg { */
+.empty-state svg {
+  color: #007e7b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .empty-state h2 { */
+.empty-state h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .empty-state p { */
+.empty-state p {
+  max-width: 560px;
+  margin: 0;
+  color: #64748b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .medix-card, */
+.medix-card,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-panel { */
+.module-panel {
+  margin: 22px;
+  padding: 20px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .medix-card h2, */
+.medix-card h2,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-panel h2 { */
+.module-panel h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 22px;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .medix-card p { */
+.medix-card p {
+  color: #64748b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .medix-input, */
+.medix-input,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form input, */
+.module-form input,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form select { */
+.module-form select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  padding: 10px 12px;
+  outline: none;
+  color: #111827;
+}
+
+textarea.medix-input {
+  min-height: 92px;
+  resize: vertical;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .medix-input:focus, */
+.medix-input:focus,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form input:focus, */
+.module-form input:focus,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form select:focus { */
+.module-form select:focus {
+  border-color: #008f8c;
+  box-shadow: 0 0 0 3px rgba(0, 143, 140, 0.12);
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .medix-button, */
+.medix-button,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form button { */
+.module-form button {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 7px;
+  background: linear-gradient(135deg, #008f8c, #006f76);
+  color: #ffffff;
+  padding: 10px 16px;
+  font-weight: 800;
+  box-shadow: 0 12px 20px rgba(0, 126, 123, 0.18);
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form { */
+.module-form {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin: 14px 0 20px;
+  padding: 14px;
+  border: 1px solid #e2e7ed;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form label { */
+.module-form label {
+  color: #475569;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form input, */
+.module-form input,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form select { */
+.module-form select {
+  margin-top: 6px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form button { */
+.module-form button {
+  align-self: end;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-summary { */
+.status-summary {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .summary-card { */
+.summary-card {
+  border: 1px solid #e2e7ed;
+  border-radius: 8px;
+  background: #fbfcfd;
+  padding: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .summary-card span { */
+.summary-card span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .summary-card strong { */
+.summary-card strong {
+  display: block;
+  margin-top: 4px;
+  color: #008f8c;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-toolbar { */
+.module-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 14px 0;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .appointments-table { */
+.appointments-table {
+  min-width: 880px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .action-row { */
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .small-action { */
+.small-action {
+  min-height: 30px;
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 9px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .small-action.teal { background: #008f8c; } */
+.small-action.teal { background: #008f8c; }
+/* Explicacion: este bloque define estilos visuales o responsivos para .small-action.blue { background: #3459d1; } */
+.small-action.blue { background: #3459d1; }
+/* Explicacion: este bloque define estilos visuales o responsivos para .small-action.green { background: #0f9f60; } */
+.small-action.green { background: #0f9f60; }
+/* Explicacion: este bloque define estilos visuales o responsivos para .small-action.red { background: #dc2626; } */
+.small-action.red { background: #dc2626; }
+/* Explicacion: este bloque define estilos visuales o responsivos para .small-action.amber { background: #c47a00; } */
+.small-action.amber { background: #c47a00; }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .muted-action { */
+.muted-action {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .report-grid { */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .report-note { */
+.report-note {
+  margin-top: 18px;
+  border: 1px solid #e2e7ed;
+  border-radius: 8px;
+  background: #f8fbfb;
+  padding: 16px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .report-note strong { */
+.report-note strong {
+  color: #007e7b;
+  font-size: 15px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .report-note p { */
+.report-note p {
+  margin: 8px 0 0;
+  color: #526070;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .export-actions { */
+.export-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .export-actions button { */
+.export-actions button {
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #007e7b;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .ai-note { */
+.ai-note {
+  background: #f3f6ff;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-grid { */
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-card { */
+.doctor-card {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid #e2e7ed;
+  border-radius: 8px;
+  background: #fbfcfd;
+  padding: 14px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-avatar { */
+.doctor-avatar {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #eef9f8;
+  color: #008f8c;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-card h3 { */
+.doctor-card h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-card p { */
+.doctor-card p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-state { */
+.doctor-state {
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .state-libre { */
+.state-libre {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .state-ocupado { */
+.state-ocupado {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .state-atendiendo { */
+.state-atendiendo {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-card dl { */
+.doctor-card dl {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 8px 0 0;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-card dl div { */
+.doctor-card dl div {
+  border-top: 1px solid #e2e7ed;
+  padding-top: 8px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-card dt { */
+.doctor-card dt {
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-card dd { */
+.doctor-card dd {
+  margin: 3px 0 0;
+  color: #0f172a;
+  font-weight: 850;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .empty-state.compact { */
+.empty-state.compact {
+  min-height: 180px;
+  margin: 0;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-screen { */
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) 430px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 143, 140, 0.2), transparent 32%),
+    linear-gradient(135deg, #edfafa 0%, #ffffff 50%, #f4f7fb 100%);
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-hero { */
+.login-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-hero h1 { */
+.login-hero h1 {
+  max-width: 620px;
+  margin: 24px 0 0;
+  color: #0f172a;
+  font-size: 56px;
+  line-height: 1.02;
+  font-weight: 900;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-hero p { */
+.login-hero p {
+  max-width: 560px;
+  margin: 18px 0 0;
+  color: #526070;
+  font-size: 18px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-panel { */
+.login-panel {
+  display: grid;
+  align-content: center;
+  border-left: 1px solid #e2e7ed;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 42px;
+  backdrop-filter: blur(14px);
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-panel form { */
+.login-panel form {
+  margin-top: 24px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-panel label { */
+.login-panel label {
+  display: block;
+  margin-bottom: 14px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-demo { */
+.login-demo {
+  margin-top: 20px;
+  border-radius: 8px;
+  background: #f1f8f8;
+  padding: 12px;
+  color: #48606a;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-error { */
+.login-error {
+  margin-top: 16px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff1f2;
+  padding: 12px;
+  color: #991b1b;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-error strong { */
+.login-error strong {
+  display: block;
+  font-size: 13px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-error p { */
+.login-error p {
+  margin: 5px 0;
+  color: #7f1d1d;
+  font-size: 13px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-error span { */
+.login-error span {
+  color: #9f1239;
+  font-size: 12px;
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para @media (max-width: 1280px) { */
+@media (max-width: 1280px) {
+/* Explicacion: este bloque define estilos visuales o responsivos para .topbar { */
+  .topbar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .context-card, */
+  .context-card,
+/* Explicacion: este bloque define estilos visuales o responsivos para .user-pill { */
+  .user-pill {
+    border-bottom: 1px solid #e4e8ee;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .dashboard-grid { */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .right-stack { */
+  .right-stack {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-grid { */
+  .flow-grid {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
+}
+
+/* Explicacion: este bloque define estilos visuales o responsivos para @media (max-width: 900px) { */
+@media (max-width: 900px) {
+/* Explicacion: este bloque define estilos visuales o responsivos para .app-shell { */
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .sidebar { */
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .topbar, */
+  .topbar,
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-screen { */
+  .login-screen {
+    grid-template-columns: 1fr;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .flow-grid, */
+  .flow-grid,
+/* Explicacion: este bloque define estilos visuales o responsivos para .kpi-strip, */
+  .kpi-strip,
+/* Explicacion: este bloque define estilos visuales o responsivos para .status-summary, */
+  .status-summary,
+/* Explicacion: este bloque define estilos visuales o responsivos para .report-grid, */
+  .report-grid,
+/* Explicacion: este bloque define estilos visuales o responsivos para .doctor-grid, */
+  .doctor-grid,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-toolbar, */
+  .module-toolbar,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-form { */
+  .module-form {
+    grid-template-columns: 1fr;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-toolbar { */
+  .module-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .dashboard-grid, */
+  .dashboard-grid,
+/* Explicacion: este bloque define estilos visuales o responsivos para .medix-card, */
+  .medix-card,
+/* Explicacion: este bloque define estilos visuales o responsivos para .module-panel { */
+  .module-panel {
+    padding: 14px;
+    margin: 14px;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-hero, */
+  .login-hero,
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-panel { */
+  .login-panel {
+    padding: 32px 22px;
+  }
+
+/* Explicacion: este bloque define estilos visuales o responsivos para .login-hero h1 { */
+  .login-hero h1 {
+    font-size: 38px;
+  }
+}
+
+/* Mejora funcional 2026: controles reales, filtros avanzados, seguridad visual y chatbot. */
+.specialty-context select,
+.filter-grid select,
+.filter-grid input,
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea,
+.incident-form input,
+.incident-form select,
+.incident-form textarea,
+.review-box select,
+.review-box textarea {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #cfd7e3;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #172033;
+  padding: 9px 11px;
+  outline: none;
+}
+
+.specialty-context select:focus,
+.filter-grid select:focus,
+.filter-grid input:focus,
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus,
+.incident-form input:focus,
+.incident-form select:focus,
+.incident-form textarea:focus,
+.review-box select:focus,
+.review-box textarea:focus,
+.password-field input:focus {
+  border-color: #008f8c;
+  box-shadow: 0 0 0 3px rgba(0, 143, 140, 0.12);
+}
+
+.specialty-context select {
+  max-width: 260px;
+  margin-top: 4px;
+  padding: 4px 8px;
+  min-height: 30px;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.live-clock {
+  background: linear-gradient(180deg, #ffffff, #f7fbfb);
+}
+
+.kpi-strip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.status-summary {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.rich-toolbar {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: 220px 150px 130px minmax(260px, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-grid .table-actions {
+  min-width: 0;
+}
+
+.filter-grid .table-actions input {
+  width: 100%;
+}
+
+.appointment-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.appointment-form.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.appointment-form label {
+  color: #415065;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  margin-top: 7px;
+}
+
+.appointment-form textarea {
+  min-height: 94px;
+  resize: vertical;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.availability-card {
+  grid-column: span 2;
+  border: 1px solid #dbe6ef;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f8fcfc, #ffffff);
+  padding: 14px;
+}
+
+.availability-card > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #007e7b;
+}
+
+.availability-card strong,
+.availability-card span {
+  display: block;
+}
+
+.availability-card dl {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 14px 0 8px;
+}
+
+.availability-card dl div {
+  border: 1px solid #e2e9f0;
+  border-radius: 7px;
+  background: #ffffff;
+  padding: 9px;
+}
+
+.availability-card dt,
+.availability-card p {
+  margin: 0;
+  color: #657286;
+  font-size: 12px;
+}
+
+.availability-card dd {
+  margin: 4px 0 0;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.inline-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 12px 0;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.inline-alert.success {
+  border: 1px solid #b7e7cd;
+  background: #ecfff4;
+  color: #087142;
+}
+
+.inline-alert.error {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #991b1b;
+}
+
+.modal-panel {
+  width: min(760px, 96vw);
+  max-height: 92vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 26px 80px rgba(15, 23, 42, 0.24);
+}
+
+.ghost-button {
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #344256;
+  padding: 8px 12px;
+  font-weight: 800;
+}
+
+.small-action.slate {
+  background: #475569;
+}
+
+.priority-normal {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.priority-preferente {
+  border-color: #fde68a;
+  background: #fffbeb;
+  color: #a16207;
+}
+
+.priority-emergencia {
+  border-color: #fecaca;
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.specialty-bars {
+  display: grid;
+  gap: 10px;
+}
+
+.specialty-bars > div {
+  display: grid;
+  grid-template-columns: minmax(105px, 1fr) minmax(0, 1.2fr) 34px;
+  gap: 9px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.specialty-bars > div > div,
+.compliance-panel .bar-row > div {
+  height: 10px;
+  border-radius: 999px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+.specialty-bars i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #008f8c, #2563eb);
+}
+
+.compliance-panel > strong {
+  display: block;
+  color: #007e7b;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.compliance-panel > span {
+  display: block;
+  margin: 4px 0 12px;
+  color: #657286;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.incident-panel {
+  overflow: hidden;
+}
+
+.incident-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.incident-form textarea,
+.review-box textarea {
+  min-height: 72px;
+  resize: vertical;
+}
+
+.incident-form > div,
+.review-box {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) auto auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.incident-form button,
+.review-box button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 7px;
+  background: #007e7b;
+  color: #ffffff;
+  padding: 9px 12px;
+  font-weight: 850;
+}
+
+.file-chip {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #334155;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.file-chip input {
+  display: none;
+}
+
+.incident-list {
+  display: grid;
+  gap: 10px;
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.incident-list article {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fbfcfd;
+  padding: 12px;
+}
+
+.incident-list article > div:first-child {
+  display: grid;
+  gap: 3px;
+}
+
+.incident-list article strong {
+  color: #152033;
+  font-size: 13px;
+}
+
+.incident-list article span,
+.incident-list article p {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.incident-meta,
+.attachment-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.attachment-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #dbe4ee;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 4px 8px;
+}
+
+.review-box {
+  grid-template-columns: 130px minmax(0, 1fr) auto;
+  margin-top: 10px;
+}
+
+.decision-note {
+  border-left: 3px solid #008f8c;
+  padding-left: 9px;
+}
+
+.incident-enviada {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.incident-en_revision {
+  border-color: #fde68a;
+  background: #fffbeb;
+  color: #a16207;
+}
+
+.incident-revisada {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.doctor-specialty-line {
+  grid-column: 1 / -1;
+  margin: 0;
+  border-top: 1px solid #e2e7ed;
+  padding-top: 8px;
+  color: #526174;
+  font-size: 12px;
+}
+
+.doctor-card dl {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.export-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.chatbot-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007e7b, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.24);
+}
+
+.chatbot-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 92px;
+  z-index: 60;
+  width: min(380px, calc(100vw - 32px));
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22);
+  overflow: hidden;
+}
+
+.chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid #e5eaf0;
+  padding: 14px;
+}
+
+.chatbot-header strong,
+.chatbot-header span {
+  display: block;
+}
+
+.chatbot-header span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.chatbot-header button {
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  padding: 6px 9px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.chatbot-messages {
+  display: grid;
+  gap: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 14px;
+}
+
+.chatbot-messages p {
+  margin: 0;
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 13px;
+}
+
+.chat-bot {
+  justify-self: start;
+  background: #f1f5f9;
+  color: #263445;
+}
+
+.chat-user {
+  justify-self: end;
+  background: #e0f7f5;
+  color: #006d75;
+}
+
+.chatbot-panel form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  gap: 8px;
+  border-top: 1px solid #e5eaf0;
+  padding: 12px;
+}
+
+.chatbot-panel input {
+  min-height: 40px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  padding: 0 11px;
+}
+
+.chatbot-panel form button {
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: #007e7b;
+  color: #ffffff;
+}
+
+.login-title {
+  margin: 16px 0 0;
+  color: #101827;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.login-subtitle {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.login-security-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.login-security-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #dbe7ea;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #0f766e;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  padding-right: 46px;
+}
+
+.password-field button {
+  position: absolute;
+  right: 6px;
+  top: 8px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: #eef5f5;
+  color: #007e7b;
+}
+
+.login-demo {
+  border: 1px solid #dbe6ef;
+  background: #fbfcfd;
+}
+
+.login-demo summary {
+  cursor: pointer;
+  font-weight: 850;
+}
+
+.login-demo div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.login-demo button {
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #007e7b;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.login-demo p {
+  margin: 10px 0 0;
+}
+
+@media (max-width: 1280px) {
+  .filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kpi-strip,
+  .status-summary,
+  .appointment-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .filter-grid,
+  .appointment-form,
+  .appointment-form.compact,
+  .incident-form > div,
+  .review-box {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2,
+  .availability-card {
+    grid-column: span 1;
+  }
+
+  .kpi-strip,
+  .status-summary,
+  .availability-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  .chatbot-launcher {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .chatbot-panel {
+    right: 16px;
+    bottom: 82px;
+  }
+}
+
+/* Rediseño visual inspirado en la referencia MEDIX mostrada por el usuario. */
+.medix-dashboard-redesign {
+  grid-template-columns: 236px minmax(0, 1fr);
+  background: #f7f9fb;
+  color: #101827;
+}
+
+.medix-dashboard-redesign .sidebar {
+  padding: 18px 14px;
+  border-right: 1px solid #e7ebf1;
+  background: #ffffff;
+}
+
+.medix-dashboard-redesign .brand {
+  padding: 0 6px 20px;
+  gap: 12px;
+}
+
+.medix-dashboard-redesign .brand h1 {
+  color: #007f7d;
+  font-size: 30px;
+  letter-spacing: 0;
+}
+
+.medix-dashboard-redesign .brand p {
+  color: #2f3b4c;
+  font-size: 13px;
+}
+
+.medix-dashboard-redesign .brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.medix-dashboard-redesign .sidebar-nav section {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.medix-dashboard-redesign .nav-title {
+  margin: 0 6px 8px;
+  color: #738093;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.medix-dashboard-redesign .nav-item {
+  min-height: 39px;
+  gap: 11px;
+  border-radius: 7px;
+  padding: 9px 10px;
+  color: #283244;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.medix-dashboard-redesign .nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.medix-dashboard-redesign .nav-item.active {
+  background: linear-gradient(135deg, #008f8c, #00777f);
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(0, 126, 123, 0.22);
+}
+
+.system-status-card {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 22px;
+  border: 1px solid #e4eaf0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 13px;
+}
+
+.system-status-card > span {
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.system-status-card strong,
+.system-status-card p,
+.system-status-card small {
+  display: block;
+  margin: 0;
+}
+
+.system-status-card strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+.system-status-card p,
+.system-status-card small {
+  color: #7a8595;
+  font-size: 11px;
+}
+
+.medix-dashboard-redesign .topbar {
+  min-height: 72px;
+  display: grid;
+  grid-template-columns: 44px minmax(230px, 1fr) minmax(270px, 1.1fr) 160px 170px 48px minmax(170px, 0.7fr);
+  gap: 0;
+  align-items: center;
+  border-bottom: 1px solid #e5eaf0;
+  background: #ffffff;
+  padding: 0 18px;
+}
+
+.topbar-menu,
+.notification-button {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.notification-button {
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.notification-button span {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  min-width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.medix-dashboard-redesign .context-card,
+.medix-dashboard-redesign .user-pill {
+  height: 54px;
+  border: 0;
+  padding: 0 12px;
+}
+
+.medix-dashboard-redesign .context-card.compact,
+.medix-dashboard-redesign .user-pill {
+  border: 1px solid #e1e7ef;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.medix-dashboard-redesign .context-card svg,
+.medix-dashboard-redesign .user-pill svg {
+  color: #162033;
+}
+
+.medix-dashboard-redesign .context-card strong,
+.medix-dashboard-redesign .user-pill strong {
+  font-size: 14px;
+}
+
+.medix-dashboard-redesign .context-card span,
+.medix-dashboard-redesign .user-pill span {
+  margin-top: 2px;
+  color: #687386;
+  font-size: 12px;
+}
+
+.medix-dashboard-redesign .specialty-context {
+  justify-self: start;
+}
+
+.medix-dashboard-redesign .specialty-context select {
+  width: 240px;
+  max-width: 240px;
+  min-height: 34px;
+  border-color: #d6dde7;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+.medix-dashboard-redesign .tabs {
+  display: none;
+}
+
+.medix-dashboard-redesign .dashboard-grid {
+  grid-template-columns: minmax(0, 1fr) 430px;
+  gap: 16px;
+  padding: 20px 18px 28px;
+}
+
+.kpi-overview {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.kpi-card {
+  min-height: 112px;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: center;
+  border: 1px solid #dde4ed;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 16px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.025);
+}
+
+.kpi-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef9fb;
+  color: #007e7b;
+}
+
+.kpi-card span,
+.kpi-card p,
+.kpi-card em {
+  color: #667085;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.kpi-card strong {
+  display: block;
+  margin-top: 4px;
+  color: #050b16;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 780;
+}
+
+.kpi-card strong small {
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+.kpi-card em {
+  grid-column: 1 / -1;
+  color: #059669;
+  font-weight: 750;
+}
+
+.medix-dashboard-redesign .main-panel,
+.medix-dashboard-redesign .side-panel {
+  border-color: #dde4ed;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.025);
+}
+
+.medix-dashboard-redesign .main-panel {
+  padding: 16px;
+}
+
+.medix-dashboard-redesign .panel-heading,
+.medix-dashboard-redesign .side-heading {
+  margin-bottom: 12px;
+}
+
+.medix-dashboard-redesign .panel-heading h2,
+.medix-dashboard-redesign .side-heading h3 {
+  font-size: 17px;
+  font-weight: 820;
+}
+
+.medix-dashboard-redesign .panel-heading p {
+  display: none;
+}
+
+.medix-dashboard-redesign .flow-grid {
+  grid-template-columns: repeat(5, minmax(130px, 1fr));
+  gap: 28px;
+  align-items: center;
+}
+
+.medix-dashboard-redesign .flow-card {
+  min-height: 104px;
+  border-color: #dfe6ee;
+  border-radius: 8px;
+  padding: 14px;
+  justify-content: center;
+  position: relative;
+}
+
+.medix-dashboard-redesign .flow-card:not(:last-child)::after {
+  content: ">";
+  position: absolute;
+  right: -20px;
+  top: 48%;
+  color: #111827;
+  font-size: 20px;
+}
+
+.medix-dashboard-redesign .flow-head {
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.medix-dashboard-redesign .flow-head span {
+  width: 32px;
+  height: 32px;
+}
+
+.medix-dashboard-redesign .flow-head strong {
+  color: #007e7b;
+  font-size: 13px;
+}
+
+.medix-dashboard-redesign .flow-card > svg,
+.medix-dashboard-redesign .flow-card p,
+.medix-dashboard-redesign .flow-detail,
+.medix-dashboard-redesign .flow-card button {
+  display: none;
+}
+
+.medix-dashboard-redesign .flow-card b {
+  margin-top: 10px;
+  color: #050b16;
+  font-size: 28px;
+  font-weight: 720;
+}
+
+.medix-dashboard-redesign .table-panel {
+  padding: 16px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.medix-dashboard-redesign .segmented {
+  gap: 0;
+  margin-bottom: 8px;
+}
+
+.medix-dashboard-redesign .segmented button {
+  min-width: 106px;
+  height: 36px;
+  border-radius: 7px 7px 0 0;
+  background: #f8fafc;
+  font-size: 11px;
+}
+
+.medix-dashboard-redesign .segmented .active {
+  background: #ffffff;
+  box-shadow: inset 0 -2px 0 #008f8c;
+}
+
+.medix-dashboard-redesign .filter-grid {
+  grid-template-columns: 150px 220px 170px minmax(220px, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.medix-dashboard-redesign .filter-grid select,
+.medix-dashboard-redesign .filter-grid input,
+.medix-dashboard-redesign .filter-grid .table-actions input {
+  min-height: 36px;
+}
+
+.medix-dashboard-redesign .data-table {
+  min-width: 760px;
+  table-layout: fixed;
+  font-size: 12px;
+}
+
+.medix-dashboard-redesign .table-panel .data-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.medix-dashboard-redesign .data-table th {
+  background: #fbfcfe;
+  color: #667085;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.medix-dashboard-redesign .data-table th,
+.medix-dashboard-redesign .data-table td {
+  border-left: 0;
+  border-right: 0;
+  padding: 8px 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-icon-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.table-icon-actions button {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.medix-dashboard-redesign .right-stack {
+  gap: 16px;
+}
+
+.live-doctors-panel .side-heading button,
+.quick-reports .side-heading button {
+  border: 0;
+  background: transparent;
+  color: #007e7b;
+  font-size: 12px;
+  font-weight: 780;
+}
+
+.mini-table {
+  border: 1px solid #e5eaf0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mini-table-head,
+.mini-table-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 84px 66px;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e8edf3;
+  font-size: 12px;
+}
+
+.mini-table-head {
+  background: #fbfcfe;
+  color: #667085;
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.mini-table-row > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #263244;
+  font-weight: 750;
+}
+
+.mini-table-row i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.mini-status {
+  justify-self: start;
+  min-width: 64px;
+  border-radius: 5px;
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.mini-status.attending {
+  background: #e6f0ff;
+  color: #1d4ed8;
+}
+
+.mini-status.busy {
+  background: #fff4e5;
+  color: #c2410c;
+}
+
+.mini-status.free {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.mini-table-foot,
+.mini-table-empty {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  color: #667085;
+  font-size: 11px;
+}
+
+.compact-list {
+  gap: 0;
+  border: 1px solid #e5eaf0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.incident-table-head,
+.compact-incident-row {
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr 80px 76px;
+  gap: 8px;
+  align-items: center;
+  border: 0;
+  border-bottom: 1px solid #e8edf3;
+  border-radius: 0;
+  background: #ffffff;
+  padding: 10px 12px;
+}
+
+.incident-table-head {
+  background: #fbfcfe;
+  color: #667085;
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.compact-incident-row strong {
+  color: #172033;
+  font-size: 12px;
+}
+
+.compact-incident-row > span:not(.status),
+.compact-incident-row time {
+  color: #667085;
+  font-size: 11px;
+}
+
+.bottom-widgets {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.25fr 1.05fr 0.95fr 1.35fr;
+  gap: 14px;
+}
+
+.quick-actions > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.quick-actions button {
+  min-height: 118px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #007e7b;
+  padding: 10px;
+}
+
+.quick-actions button span {
+  color: #334155;
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.18;
+}
+
+.mini-donut-row {
+  display: grid;
+  grid-template-columns: 138px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.mini-donut {
+  width: 118px;
+  height: 118px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  border-radius: 50%;
+  background: conic-gradient(#008f8c 0 31%, #2563eb 31% 54%, #6554c0 54% 72%, #58c8be 72% 86%, #c7cbd2 86% 100%);
+  position: relative;
+}
+
+.mini-donut::after {
+  content: "";
+  position: absolute;
+  inset: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.mini-donut span,
+.mini-donut small {
+  position: relative;
+  z-index: 1;
+}
+
+.mini-donut span {
+  color: #111827;
+  font-size: 24px;
+  font-weight: 850;
+}
+
+.mini-donut small {
+  color: #667085;
+  font-size: 11px;
+}
+
+.quick-report-row {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) 58px 78px;
+  gap: 10px;
+  align-items: center;
+  border-top: 1px solid #e8edf3;
+  padding: 11px 0;
+}
+
+.quick-report-row strong,
+.quick-report-row span {
+  display: block;
+}
+
+.quick-report-row strong {
+  color: #334155;
+  font-size: 12px;
+}
+
+.quick-report-row span {
+  color: #7a8595;
+  font-size: 10px;
+}
+
+.quick-report-row button {
+  min-height: 30px;
+  border: 1px solid #dbe3ec;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #007e7b;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.medix-dashboard-redesign .chatbot-launcher {
+  width: auto;
+  min-width: 92px;
+  height: 46px;
+  grid-auto-flow: column;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 0 13px;
+  background: linear-gradient(135deg, #008f8c, #00777f);
+}
+
+.medix-dashboard-redesign .chatbot-launcher::after {
+  content: "Ayuda";
+  font-weight: 850;
+}
+
+.medix-dashboard-redesign .chatbot-launcher::before {
+  content: "1";
+  position: absolute;
+  top: -7px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+@media (max-width: 1500px) {
+  .kpi-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .medix-dashboard-redesign .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .medix-dashboard-redesign .right-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bottom-widgets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .medix-dashboard-redesign {
+    grid-template-columns: 1fr;
+  }
+
+  .medix-dashboard-redesign .topbar {
+    grid-template-columns: 44px 1fr;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .medix-dashboard-redesign .context-card,
+  .medix-dashboard-redesign .user-pill,
+  .notification-button {
+    grid-column: span 2;
+  }
+
+  .kpi-overview,
+  .medix-dashboard-redesign .right-stack,
+  .bottom-widgets,
+  .quick-actions > div:last-child {
+    grid-template-columns: 1fr;
+  }
+
+  .medix-dashboard-redesign .flow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medix-dashboard-redesign .table-panel .module-toolbar.rich-toolbar {
+    overflow: hidden;
+  }
+
+  .medix-dashboard-redesign .table-panel .filter-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .medix-dashboard-redesign .table-panel .filter-grid select,
+  .medix-dashboard-redesign .table-panel .filter-grid input,
+  .medix-dashboard-redesign .table-panel .table-actions {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .medix-dashboard-redesign .flow-card:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* Pasada de fidelidad visual: dashboard mas fino, compacto y dentro de recuadros. */
+.medix-dashboard-redesign {
+  grid-template-columns: 220px minmax(0, 1fr);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.medix-dashboard-redesign strong,
+.medix-dashboard-redesign h1,
+.medix-dashboard-redesign h2,
+.medix-dashboard-redesign h3 {
+  letter-spacing: 0;
+}
+
+.medix-dashboard-redesign .brand h1 {
+  font-size: 28px;
+  font-weight: 780;
+}
+
+.medix-dashboard-redesign .brand p {
+  font-size: 12px;
+}
+
+.medix-dashboard-redesign .nav-title {
+  font-size: 11px;
+  font-weight: 720;
+}
+
+.medix-dashboard-redesign .nav-item {
+  min-height: 37px;
+  padding: 8px 9px;
+  font-size: 13px;
+  font-weight: 620;
+}
+
+.medix-dashboard-redesign .topbar {
+  grid-template-columns: 38px minmax(210px, 1fr) minmax(260px, 1.05fr) 170px 160px 42px minmax(166px, 0.65fr);
+  min-height: 70px;
+  padding: 0 16px;
+}
+
+.medix-dashboard-redesign .context-card,
+.medix-dashboard-redesign .user-pill {
+  height: 50px;
+  gap: 10px;
+}
+
+.medix-dashboard-redesign .context-card strong,
+.medix-dashboard-redesign .user-pill strong {
+  font-size: 13px;
+  font-weight: 720;
+}
+
+.medix-dashboard-redesign .context-card span,
+.medix-dashboard-redesign .user-pill span {
+  font-size: 11px;
+}
+
+.medix-dashboard-redesign .dashboard-grid {
+  gap: 14px;
+  padding: 18px 18px 26px;
+}
+
+.kpi-overview {
+  gap: 12px;
+}
+
+.kpi-card {
+  min-height: 108px;
+  padding: 14px;
+  grid-template-columns: 44px minmax(0, 1fr);
+}
+
+.kpi-icon {
+  width: 42px;
+  height: 42px;
+}
+
+.kpi-card span,
+.kpi-card p,
+.kpi-card em {
+  font-size: 11px;
+}
+
+.kpi-card strong {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.kpi-card strong small {
+  font-size: 12px;
+}
+
+.medix-dashboard-redesign .main-panel,
+.medix-dashboard-redesign .side-panel,
+.medix-dashboard-redesign .module-panel {
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.025);
+}
+
+.medix-dashboard-redesign .module-panel {
+  margin: 18px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.medix-dashboard-redesign .panel-heading h2,
+.medix-dashboard-redesign .side-heading h3,
+.medix-dashboard-redesign .module-panel h2 {
+  font-size: 16px;
+  font-weight: 740;
+}
+
+.medix-dashboard-redesign .panel-heading > span,
+.medix-dashboard-redesign .side-heading span {
+  font-size: 11px;
+}
+
+.medix-dashboard-redesign .flow-grid {
+  gap: 26px;
+}
+
+.medix-dashboard-redesign .flow-card {
+  min-height: 98px;
+  padding: 12px;
+}
+
+.medix-dashboard-redesign .flow-head span {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.medix-dashboard-redesign .flow-head strong {
+  font-size: 12px;
+  font-weight: 720;
+}
+
+.medix-dashboard-redesign .flow-card b {
+  font-size: 25px;
+  font-weight: 690;
+}
+
+.medix-dashboard-redesign .table-panel .data-table-wrap {
+  max-height: 234px;
+  border: 1px solid #e8eef5;
+  border-radius: 8px;
+}
+
+.medix-dashboard-redesign .data-table {
+  width: 100%;
+  min-width: 0;
+  font-size: 11px;
+}
+
+.medix-dashboard-redesign .data-table th {
+  font-size: 9px;
+  font-weight: 760;
+}
+
+.medix-dashboard-redesign .data-table th,
+.medix-dashboard-redesign .data-table td {
+  padding: 7px 9px;
+  vertical-align: middle;
+}
+
+.medix-dashboard-redesign .data-table td {
+  color: #263244;
+}
+
+.medix-dashboard-redesign .status {
+  min-width: 62px;
+  padding: 3px 7px;
+  font-size: 10.5px;
+  font-weight: 720;
+}
+
+.medix-dashboard-redesign .filter-grid {
+  grid-template-columns: 150px 205px 160px minmax(210px, 1fr);
+  gap: 9px;
+}
+
+.medix-dashboard-redesign .filter-grid select,
+.medix-dashboard-redesign .filter-grid input,
+.medix-dashboard-redesign .filter-grid .table-actions input,
+.medix-dashboard-redesign .medix-input,
+.medix-dashboard-redesign .module-form input,
+.medix-dashboard-redesign .module-form select,
+.medix-dashboard-redesign .appointment-form input,
+.medix-dashboard-redesign .appointment-form select,
+.medix-dashboard-redesign .appointment-form textarea {
+  min-height: 36px;
+  border-color: #d8e0ea;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+.medix-dashboard-redesign .segmented {
+  overflow-x: auto;
+  padding-bottom: 1px;
+}
+
+.medix-dashboard-redesign .segmented button {
+  min-width: 98px;
+  height: 34px;
+  font-size: 10.5px;
+  font-weight: 680;
+}
+
+.mini-table-head,
+.mini-table-row {
+  grid-template-columns: 1.12fr 0.95fr 78px 58px;
+  padding: 9px 10px;
+  font-size: 11px;
+}
+
+.mini-table-head {
+  font-size: 9px;
+}
+
+.mini-status {
+  min-width: 58px;
+  padding: 4px 6px;
+  font-size: 10px;
+}
+
+.incident-table-head,
+.compact-incident-row {
+  grid-template-columns: 1.25fr 0.8fr 76px 74px;
+  padding: 9px 10px;
+}
+
+.incident-table-head {
+  font-size: 9px;
+}
+
+.compact-incident-row strong,
+.compact-incident-row > span:not(.status),
+.compact-incident-row time {
+  font-size: 10.5px;
+}
+
+.bottom-widgets {
+  grid-template-columns: 1.25fr 1.05fr 0.95fr 1.35fr;
+  gap: 12px;
+}
+
+.quick-actions button {
+  min-height: 104px;
+  padding: 8px;
+}
+
+.quick-actions button svg {
+  width: 27px;
+  height: 27px;
+}
+
+.quick-actions button span {
+  font-size: 10.5px;
+}
+
+.mini-donut-row {
+  grid-template-columns: 120px minmax(0, 1fr);
+}
+
+.mini-donut {
+  width: 108px;
+  height: 108px;
+}
+
+.mini-donut span {
+  font-size: 22px;
+}
+
+.specialty-bars > div {
+  grid-template-columns: minmax(92px, 1fr) minmax(0, 1.1fr) 28px;
+  font-size: 10.5px;
+}
+
+.quick-report-row {
+  grid-template-columns: 24px minmax(0, 1fr) 52px 70px;
+  padding: 9px 0;
+}
+
+.quick-report-row strong {
+  font-size: 11px;
+}
+
+.quick-report-row span,
+.quick-report-row button {
+  font-size: 10px;
+}
+
+.medix-dashboard-redesign .module-form,
+.medix-dashboard-redesign .appointment-form {
+  border: 1px solid #e3eaf2;
+  border-radius: 8px;
+  background: #fbfcfe;
+  padding: 14px;
+}
+
+.medix-dashboard-redesign .module-form {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.medix-dashboard-redesign .status-summary {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.medix-dashboard-redesign .summary-card {
+  padding: 10px;
+}
+
+.medix-dashboard-redesign .summary-card span {
+  font-size: 11px;
+}
+
+.medix-dashboard-redesign .summary-card strong {
+  font-size: 20px;
+}
+
+.medix-dashboard-redesign .doctor-card {
+  border-color: #e4eaf1;
+  background: #ffffff;
+}
+
+.medix-dashboard-redesign .doctor-card h3 {
+  font-size: 13px;
+}
+
+.medix-dashboard-redesign .doctor-card p,
+.medix-dashboard-redesign .doctor-card dt {
+  font-size: 11px;
+}
+
+.medix-dashboard-redesign .doctor-card dd {
+  font-size: 12px;
+}
+
+.medix-dashboard-redesign .module-panel .appointments-table {
+  min-width: 1080px;
+  table-layout: auto;
+}
+
+.medix-dashboard-redesign .module-panel .data-table-wrap {
+  border: 1px solid #e8eef5;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+@media (max-width: 1280px) {
+  .medix-dashboard-redesign .module-form,
+  .medix-dashboard-redesign .appointment-form,
+  .medix-dashboard-redesign .status-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1500px) {
+  .medix-dashboard-redesign .dashboard-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .medix-dashboard-redesign .right-stack,
+  .bottom-widgets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kpi-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .medix-dashboard-redesign {
+    grid-template-columns: 1fr;
+  }
+
+  .medix-dashboard-redesign .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .medix-dashboard-redesign .topbar {
+    grid-template-columns: 38px 1fr;
+    gap: 8px;
+    min-height: auto;
+    padding: 10px;
+  }
+
+  .medix-dashboard-redesign .context-card,
+  .medix-dashboard-redesign .user-pill,
+  .notification-button {
+    grid-column: span 2;
+  }
+
+  .kpi-overview,
+  .medix-dashboard-redesign .right-stack,
+  .bottom-widgets,
+  .quick-actions > div:last-child,
+  .medix-dashboard-redesign .module-form,
+  .medix-dashboard-redesign .appointment-form,
+  .medix-dashboard-redesign .status-summary,
+  .availability-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  .medix-dashboard-redesign .flow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medix-dashboard-redesign .flow-card:not(:last-child)::after {
+    display: none;
+  }
+
+  .medix-dashboard-redesign .module-panel {
+    margin: 12px;
+  }
+}
+
+/* Ajuste final de fidelidad visual al dashboard de referencia. */
+.medix-dashboard-redesign .topbar {
+  grid-template-columns: 42px minmax(238px, 1fr) minmax(292px, 1.08fr) 168px 168px 42px minmax(188px, 0.74fr);
+  column-gap: 8px;
+  min-height: 72px;
+  padding: 0 14px;
+  background: #ffffff;
+}
+
+.medix-dashboard-redesign .topbar-menu {
+  justify-self: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+}
+
+.medix-dashboard-redesign .context-card,
+.medix-dashboard-redesign .user-pill {
+  min-width: 0;
+  height: 52px;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.medix-dashboard-redesign .context-card.wide {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 16px;
+  align-items: center;
+  padding-left: 6px;
+}
+
+.medix-dashboard-redesign .context-card.specialty-context {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  justify-self: stretch;
+  padding-left: 4px;
+}
+
+.medix-dashboard-redesign .context-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e0e7ef;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #172033;
+}
+
+.medix-dashboard-redesign .context-icon.hospital-tile {
+  color: #162033;
+}
+
+.medix-dashboard-redesign .context-icon.specialty-tile {
+  color: #2463d6;
+}
+
+.medix-dashboard-redesign .context-icon.plain {
+  border: 0;
+  background: transparent;
+  color: #162033;
+}
+
+.medix-dashboard-redesign .context-card strong,
+.medix-dashboard-redesign .user-pill strong {
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 780;
+  line-height: 1.05;
+}
+
+.medix-dashboard-redesign .context-card span,
+.medix-dashboard-redesign .user-pill span {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.medix-dashboard-redesign .context-chevron {
+  justify-self: end;
+  color: #0f172a;
+}
+
+.medix-dashboard-redesign .specialty-context select {
+  width: 100%;
+  max-width: none;
+  min-height: 34px;
+  margin-top: 4px;
+  border: 1px solid #d7dee8;
+  border-radius: 7px;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.medix-dashboard-redesign .context-card.compact {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  border: 1px solid #dfe6ee;
+  box-shadow: none;
+}
+
+.medix-dashboard-redesign .context-card.compact strong {
+  font-size: 12px;
+}
+
+.medix-dashboard-redesign .context-card.compact span {
+  color: #334155;
+  font-size: 11px;
+}
+
+.medix-dashboard-redesign .notification-button {
+  width: 38px;
+  height: 38px;
+  align-self: center;
+  border: 0;
+  background: #ffffff;
+}
+
+.medix-dashboard-redesign .notification-button span {
+  top: 2px;
+  right: 1px;
+  min-width: 17px;
+  height: 17px;
+  border: 2px solid #ffffff;
+  background: #ef4444;
+  font-size: 10px;
+}
+
+.medix-dashboard-redesign .user-pill {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 34px;
+  border: 1px solid #dfe6ee;
+  border-radius: 8px;
+}
+
+.medix-dashboard-redesign .avatar-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f3f6f9;
+  color: #111827;
+}
+
+.medix-dashboard-redesign .user-pill button {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.medix-dashboard-redesign .nav-item {
+  transition: background 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.medix-dashboard-redesign .nav-item:not(.active):hover {
+  background: #f5f8fb;
+  color: #0f172a;
+  box-shadow: none;
+}
+
+.medix-dashboard-redesign .nav-item:focus-visible {
+  outline: 2px solid rgba(0, 143, 140, 0.35);
+  outline-offset: 2px;
+}
+
+.bottom-widgets > .side-panel,
+.bottom-widgets > .main-panel {
+  min-height: 184px;
+  padding: 16px;
+}
+
+.bottom-widgets .side-heading {
+  margin-bottom: 14px;
+}
+
+.bottom-widgets .side-heading h3,
+.bottom-widgets .panel-heading h2 {
+  color: #020617;
+  font-size: 16px;
+  font-weight: 780;
+  line-height: 1.35;
+}
+
+.quick-actions > div:last-child {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.quick-actions button {
+  min-height: 104px;
+  border: 1px solid #dfe7f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #00837f;
+  padding: 10px 8px;
+}
+
+.quick-actions button svg {
+  width: 31px;
+  height: 31px;
+  margin-bottom: 9px;
+  stroke-width: 1.85;
+}
+
+.quick-actions button span {
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 760;
+  line-height: 1.12;
+}
+
+.quick-actions .quick-action-danger {
+  color: #dc2626;
+}
+
+.mini-donut-row {
+  grid-template-columns: 126px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.mini-donut {
+  width: 116px;
+  height: 116px;
+  background:
+    radial-gradient(circle at center, #ffffff 0 36%, transparent 37%),
+    conic-gradient(#079b95 0 42%, #2d6cdf 42% 66%, #6252c9 66% 83%, #58c8bd 83% 93%, #c9ced6 93% 100%);
+}
+
+.mini-donut span {
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.mini-donut small {
+  color: #475569;
+  font-size: 12px;
+}
+
+.specialty-bars {
+  gap: 11px;
+}
+
+.specialty-bars > div {
+  grid-template-columns: minmax(0, 1fr) 28px;
+  gap: 8px;
+  color: #111827;
+  font-size: 11.5px;
+  font-weight: 620;
+}
+
+.specialty-bars > div > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  line-height: 1.15;
+}
+
+.specialty-bars > div > span i {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border-radius: 2px;
+  background: var(--legend-color, #079b95);
+}
+
+.specialty-bars > div > strong {
+  justify-self: end;
+  color: #0f172a;
+  font-size: 12px;
+}
+
+.specialty-bars > div > small {
+  display: none;
+}
+
+.bottom-widgets .metric {
+  min-height: 54px;
+  margin-bottom: 9px;
+  border: 1px solid #dfe7f0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px 12px;
+}
+
+.bottom-widgets .metric svg {
+  color: #2563eb;
+}
+
+.bottom-widgets .metric span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 680;
+}
+
+.bottom-widgets .metric strong {
+  color: #020617;
+  font-size: 18px;
+  font-weight: 820;
+}
+
+@media (max-width: 1500px) {
+  .medix-dashboard-redesign .topbar {
+    grid-template-columns: 38px minmax(178px, 0.9fr) minmax(246px, 1fr) 142px 142px 38px minmax(150px, 0.72fr);
+    column-gap: 6px;
+    padding: 0 10px;
+  }
+
+  .medix-dashboard-redesign .context-card,
+  .medix-dashboard-redesign .user-pill {
+    padding-inline: 8px;
+  }
+
+  .medix-dashboard-redesign .context-card strong,
+  .medix-dashboard-redesign .user-pill strong {
+    font-size: 12px;
+  }
+
+  .medix-dashboard-redesign .context-card span,
+  .medix-dashboard-redesign .user-pill span {
+    font-size: 10.5px;
+  }
+
+  .medix-dashboard-redesign .specialty-context select {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 980px) {
+  .medix-dashboard-redesign .topbar {
+    grid-template-columns: 38px 1fr;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .medix-dashboard-redesign .context-card.wide,
+  .medix-dashboard-redesign .context-card.specialty-context,
+  .medix-dashboard-redesign .context-card.compact,
+  .medix-dashboard-redesign .user-pill,
+  .medix-dashboard-redesign .notification-button {
+    grid-column: span 2;
+  }
+
+  .quick-actions > div:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mini-donut-row {
+    grid-template-columns: 118px minmax(0, 1fr);
+  }
+}
+
+/* Version 2: funciones operativas reales para alertas, chatbot y disponibilidad medica. */
+.medix-dashboard-redesign .notification-button.active {
+  border: 1px solid #b7e5e2;
+  background: #e9fbf9;
+  color: #007e7b;
+}
+
+.notification-panel {
+  position: fixed;
+  top: 76px;
+  right: 248px;
+  z-index: 70;
+  width: min(392px, calc(100vw - 32px));
+  border: 1px solid #dfe7f0;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+  overflow: hidden;
+}
+
+.notification-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #e8eef5;
+  padding: 14px;
+}
+
+.notification-panel-head strong,
+.notification-panel-head span {
+  display: block;
+}
+
+.notification-panel-head strong {
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.notification-panel-head span {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.notification-panel-head button,
+.notification-item button {
+  border: 1px solid #d7e0ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #007e7b;
+  padding: 6px 9px;
+  font-size: 11px;
+  font-weight: 780;
+}
+
+.notification-list {
+  display: grid;
+  gap: 8px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.notification-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  border: 1px solid #e4ebf2;
+  border-radius: 8px;
+  background: #fbfcfe;
+  padding: 10px;
+}
+
+.notification-item > span {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #edfafa;
+  color: #008f8c;
+}
+
+.notification-item.tone-danger > span {
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+.notification-item.tone-warning > span {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.notification-item.tone-success > span {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.notification-item strong,
+.notification-item p {
+  margin: 0;
+}
+
+.notification-item strong {
+  color: #0f172a;
+  font-size: 12px;
+}
+
+.notification-item p {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.notification-item button {
+  margin-top: 8px;
+}
+
+.notification-empty {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  color: #64748b;
+  padding: 18px;
+  text-align: center;
+}
+
+.doctor-availability-card {
+  grid-column: span 2;
+}
+
+.doctor-availability-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.doctor-availability-list button {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr);
+  gap: 4px 8px;
+  align-items: center;
+  border: 1px solid #e0e7ef;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+  text-align: left;
+}
+
+.doctor-availability-list button.selected {
+  border-color: #008f8c;
+  background: #effefd;
+  box-shadow: inset 0 0 0 1px rgba(0, 143, 140, 0.25);
+}
+
+.doctor-availability-list button:disabled {
+  opacity: 0.62;
+  cursor: not-allowed;
+}
+
+.doctor-availability-list strong,
+.doctor-availability-list small,
+.doctor-availability-list em {
+  grid-column: 2;
+}
+
+.doctor-availability-list strong {
+  color: #0f172a;
+  font-size: 12px;
+}
+
+.doctor-availability-list small {
+  color: #64748b;
+  font-size: 11px;
+  font-style: normal;
+}
+
+.doctor-availability-list em {
+  color: #007e7b;
+  font-size: 10.5px;
+  font-style: normal;
+  font-weight: 760;
+}
+
+.live-dot {
+  width: 9px;
+  height: 9px;
+  grid-row: span 3;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.live-dot.free {
+  background: #10b981;
+}
+
+.live-dot.busy {
+  background: #f97316;
+}
+
+.live-dot.warning {
+  background: #eab308;
+}
+
+.chatbot-suggestions {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  border-bottom: 1px solid #e8eef5;
+  padding: 10px 12px;
+}
+
+.chatbot-suggestions button {
+  flex: 0 0 auto;
+  border: 1px solid #d8e5ef;
+  border-radius: 999px;
+  background: #f8fbfd;
+  color: #007e7b;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 780;
+}
+
+.chatbot-panel {
+  width: min(430px, calc(100vw - 32px));
+}
+
+.chatbot-messages {
+  max-height: 315px;
+}
+
+@media (max-width: 980px) {
+  .notification-panel {
+    top: 84px;
+    right: 16px;
+  }
+
+  .doctor-availability-list {
+    grid-template-columns: 1fr;
+  }
+}

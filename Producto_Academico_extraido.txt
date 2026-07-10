@@ -1,0 +1,33 @@
+PAGES 8
+
+--- PAGE 1 ---
+
+PRODUCTO ACADÉMICOUniversidad La Salle – Trabajo Final1. Título del ProyectoPropuesta de Mejora de un Sistema de Información en una Empresa de la Localidad Peruana o Arequipeña📝 ¿Qué debes colocar aquí?Debes escribir un título claro que incluya:Tipo de proyecto (mejora, implementación, rediseño) Sistema de información Nombre de la empresa (cuando ya la tengas) 📌 Ejemplo:“Propuesta de Implementación de un Sistema de Gestión de Inventarios en la Empresa X”2. Introducción📝 ¿Qué debes colocar aquí?Explica de qué trata el trabajo Menciona que es un proyecto por fases Indica el objetivo general Explica brevemente por qué es importante 📌 Incluye:Contexto académico Alcance general del proyecto 3. Descripción de la Empresa (Nivel Detallado)⚠ Esta es una de las secciones MÁS IMPORTANTES.
+
+--- PAGE 2 ---
+
+3.1 Información General📝 Debes incluir:Nombre de la empresa Ubicación Rubro Tamaño Número de trabajadores Misión y visión (si existe) 3.2 Estructura Organizacional (Organigrama)📝 Debes incluir:Cómo está organizada la empresa Áreas principales Jerarquía 📌 Además:Agrega un organigrama en anexos (imagen o diagrama) 3.3 Área de Estudio📝 Debes explicar:Qué área estás analizando (ejemplo: inventarios, ventas) Qué hace esa área Quiénes trabajan ahí Qué responsabilidades tienen 3.4 Procesos del Área📝 Debes detallar cómo funciona realmente el área:
+
+--- PAGE 3 ---
+
+ Procesos:Paso a paso de lo que hacen 📥 Entradas:Qué información reciben 📤 Salidas:Qué generan 📌 Esto puede salir de:Observación Entrevistas 3.5 Fuentes de Información📝 Debes indicar de dónde obtuviste la información:Entrevistas Intranet Documentos físicos Observación 📌 Esto valida tu trabajo (MUY importante para el docente)3.6 Relación con Otras Áreas📝 Debes explicar:Con qué áreas se conecta Qué información envía y recibe 📌 Ejemplo:Ventas  envía pedidos Almacén  recibe productos 
+
+--- PAGE 4 ---
+
+4. Problema o Necesidad Detectada4.1 Descripción del Problema📝 Explica claramente cuál es el problema real.4.2 Evidencia📝 Debes demostrar el problema con:Ejemplos reales Lo que viste o te dijeron 4.3 Procesos Afectados📝 ¿Qué procesos están fallando?4.4 Causas📝 ¿Por qué ocurre el problema?4.5 Consecuencias📝 ¿Qué impacto tiene?Tiempo Dinero Errores 4.6 Relación con Sistemas de Información📝 Conecta con el curso:Qué sistema falta o está mal 
+
+--- PAGE 5 ---
+
+4.7 Justificación📝 ¿Por qué es importante resolverlo?4.8 Alcance📝 Define:Qué vas a mejorar Qué NO vas a tocar 5. Propuesta de Solución📝 Debes explicar:Qué sistema propones Cómo funciona Qué mejora 6. Levantamiento de Requerimientos6.1 Requerimientos Funcionales📝 ¿Qué debe hacer el sistema?6.2 Requerimientos No Funcionales📝 ¿Cómo debe comportarse?6.3 Requerimientos Técnicos📝 ¿Qué tecnología necesita?6.4 Gestión de Requerimientos
+
+--- PAGE 6 ---
+
+📝 Explica:Cómo los obtuviste Cómo los actualizarás 7. Arquitectura Tecnológica📝 Debes explicar:Cómo estará estructurado el sistema Capas o componentes 8. Tecnologías📝 Debes listar y justificar:Lenguajes Base de datos Herramientas 9. Seguridad y Ciberseguridad📝 Debes explicar:Cómo protegerás la información Accesos Cifrado Backups 10. Esquema de Pruebas📝 Debes explicar:Cómo probarás el sistema Tipos de pruebas 
+
+--- PAGE 7 ---
+
+11. Metodología📝 Explica:Cómo desarrollarás el proyecto por fases 12. Plan de Trabajo📝 Debes incluir:Organización del equipo Avances semanales 13. Resultados Esperados📝 ¿Qué mejoras se esperan?14. Conclusión📝 Resume todo el trabajo.15. Recomendaciones📝 Sugerencias para la empresa.16. Uso de Plantilla Institucional📝 Indica que debes usar la plantilla del docente.17. Anexos📝 Debes agregar:Diagramas Organigrama Mockups 
+
+--- PAGE 8 ---
+
+Cronograma

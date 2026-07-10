@@ -12,8 +12,8 @@ Este archivo organiza el proyecto por requisito funcional para facilitar defensa
 - Headers de seguridad HTTP:
   - `backend/app/main.py`
 - Cliente limpia sesion si el token vence o es invalido:
-  - `frontend/src/services/api.js`
-  - `frontend/src/services/authService.js`
+  - `frontend/src/services/RequisitoNoFuncional_Seguridad_API_SesionEscalabilidad.js`
+  - `frontend/src/services/RequisitoFuncional_Login_AutenticacionRolesSesion.js`
 - Login con mensaje amigable:
   - `frontend/src/pages/Login.jsx`
 
@@ -68,10 +68,10 @@ Este archivo organiza el proyecto por requisito funcional para facilitar defensa
 ## Configuracion inicial
 
 - Creacion de tablas, migraciones simples y usuarios demo:
-  - `backend/app/scripts/init_db.py`
+  - `backend/app/scripts/requisito_no_funcional_inicializacion_datos_demo_despliegue.py`
 
 ## Diseño visual
 
 - Sistema visual general, estados, tablas, login, dashboard y tarjetas:
-  - `frontend/src/index.css`
+  - `frontend/src/RequisitoNoFuncional_InterfazDisenoResponsivo_Usabilidad.css`
   - `frontend/src/components/ui/Icon.jsx`
